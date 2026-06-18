@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --bg: #eef5ff;
+  --bg-elevated: rgba(255, 255, 255, 0.84);
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-strong: rgba(255, 255, 255, 0.94);
+  --border: rgba(47, 94, 168, 0.12);
+  --text: #12304f;
+  --muted: #58708e;
+  --accent: #2b6edc;
+  --accent-soft: #7aa8f5;
+}
+
+.theme-dark {
+  color-scheme: dark;
+  --bg: #0c1930;
+  --bg-elevated: rgba(16, 36, 61, 0.76);
+  --surface: rgba(255, 255, 255, 0.08);
+  --surface-strong: rgba(255, 255, 255, 0.12);
+  --border: rgba(160, 196, 255, 0.14);
+  --text: #f3f8ff;
+  --muted: #b5c8e1;
+  --accent: #67a0ff;
+  --accent-soft: #9ec7ff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply min-h-screen font-sans antialiased;
+  background:
+    radial-gradient(circle at top left, rgba(79, 139, 255, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(158, 204, 255, 0.2), transparent 22%),
+    linear-gradient(180deg, var(--bg) 0%, color-mix(in srgb, var(--bg) 92%, #dbeaff) 100%);
+  color: var(--text);
+}
+
+#root {
+  @apply min-h-screen;
+}
+
+.glass-panel {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(22px);
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.section-title {
+  @apply font-display text-4xl tracking-tight sm:text-5xl lg:text-6xl;
+}
+
+.eyebrow {
+  @apply text-xs font-semibold uppercase tracking-[0.28em];
+  color: var(--accent-soft);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(60px);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.error-icon,
+.error-text {
+  display: none !important;
+}
