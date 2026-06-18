@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 
 export function useSpeechRecognition() {
   const recognitionRef = useRef(null);
@@ -54,7 +54,7 @@ export function useSpeechRecognition() {
     };
   }, [supported]);
 
-  const startListening = ({ lang = "en-IN", onResult, onError } = {}) => {
+  const startListening = useCallback(({ lang = "en-IN", onResult, onError } = {}) => {
     if (!recognitionRef.current) {
       setError("Speech recognition is not supported in this browser.");
       return;
@@ -63,11 +63,11 @@ export function useSpeechRecognition() {
     callbacksRef.current = { onResult, onError };
     recognitionRef.current.lang = lang;
     recognitionRef.current.start();
-  };
+  }, []);
 
-  const stopListening = () => {
+  const stopListening = useCallback(() => {
     recognitionRef.current?.stop();
-  };
+  }, []);
 
   return {
     transcript,
@@ -78,4 +78,3 @@ export function useSpeechRecognition() {
     stopListening,
   };
 }
-
