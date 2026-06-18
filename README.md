@@ -1,15 +1,15 @@
-# Teacher's Copilot
+# ClassMate AI
 **Voice-Enabled AI Teaching Assistant for Government Schools**
 
 ## Problem Statement
 Government school teachers often teach large classrooms with students from diverse linguistic backgrounds. Many students struggle to understand complex concepts taught in English, while teachers frequently spend valuable classroom time simplifying lessons and translating textbook content.
 
-Teacher's Copilot is designed to assist teachers during live classroom sessions by providing voice-enabled concept simplification and bilingual translation support, helping bridge language and learning gaps.
+ClassMate AI is designed to assist teachers during live classroom sessions by providing voice-enabled concept simplification and bilingual translation support, helping bridge language and learning gaps.
 
 ---
 
 ## Solution Overview
-Teacher's Copilot is an AI-powered classroom assistant that enables teachers to interact using voice commands.
+ClassMate AI is an AI-powered classroom assistant that enables teachers to interact using voice commands.
 
 The system can:
 
@@ -213,6 +213,6 @@ GEMINI_API_KEY=your_api_key_here
 ---
 
 ## Impact
-Teacher's Copilot aims to make classroom learning more accessible, engaging, and inclusive by reducing language barriers and helping teachers deliver concepts more effectively in multilingual government-school environments.
+ClassMate AI aims to make classroom learning more accessible, engaging, and inclusive by reducing language barriers and helping teachers deliver concepts more effectively in multilingual government-school environments.
 
 ---
